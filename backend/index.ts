@@ -43,7 +43,7 @@ export const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 app.get("/", async (c) => {
   const html = fs.readFileSync(path.join(dist, "index.html")).toString();
 
-  // await sleep(500);
+  await sleep(500);
 
   return c.html(html);
 });
