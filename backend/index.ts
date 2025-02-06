@@ -20,7 +20,7 @@ app.get("/assets/*", async (c) => {
   lastMonth.setMonth(lastMonth.getMonth() - 1);
 
   // Set cache headers
-  c.header("Cache-Control", "max-age=0,must-revalidate");
+  c.header("Cache-Control", "max-age=31536000,must-revalidate");
   c.header("ETag", `"${etag}"`);
 
   // Set MIME type
